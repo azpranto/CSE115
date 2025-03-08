@@ -1,4 +1,4 @@
-/*Write a program that deletes the first element in an array which matches a search key.*/
+/*Write a program that deletes all the elements in an array which match a search key.*/
 
 #include <stdio.h>
 
@@ -22,12 +22,13 @@ int main() {
             for (int j = i; j < n-1; j++) {
                 arr[j] = arr[j+1];
             }
-            break;
+            n--;
+            i--;
         }
     }
 
-    printf("Array after deleting the first element matching the search key: ");
-    for (i = 0; i < n-1; i++) {
+    printf("Array after deleting all elements matching the search key: ");
+    for (i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
     
